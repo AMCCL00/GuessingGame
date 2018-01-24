@@ -16,6 +16,12 @@ public class Main {
         System.out.println("Enter Your Guess: ");
         int userGuess = input.nextInt();
 
+        int number = (int)Math.round(Math.random());
+
+        if (userGuess > number) {
+            System.out.println("Your guess was too high, try again!");
+        }
+        
 
     }
 }
