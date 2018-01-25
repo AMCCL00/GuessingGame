@@ -19,7 +19,7 @@ public class Main {
             System.out.println("Enter Your Guess: ");
             int userGuess = input.nextInt();
 
-            if (numberOfTimes >= 5){
+            if (numberOfTimes >= 4){
                 System.out.println("Sorry! Would you like to play again?");
                 String playAgainThree = input.nextLine();
                 if (playAgainThree.equals("no")){
@@ -33,7 +33,7 @@ public class Main {
                 else if (playAgainThree.equals("yes")) {
                     System.out.println("Great!");
                     playAgain = true;
-                    numberOfTimes = 0
+                    numberOfTimes = 0;
                 }
             }
 
