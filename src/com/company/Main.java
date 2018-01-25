@@ -30,9 +30,11 @@ public class Main {
                     System.out.println("Ending Program due to invalid response");
                     playAgain = false;
                 }
-                else if (playAgainThree.equals("yes")){
+                else if (playAgainThree.equals("yes")) {
                     System.out.println("Great!");
                     playAgain = true;
+                    numberOfTimes = 0
+                }
             }
 
             else if (userGuess > number) {
