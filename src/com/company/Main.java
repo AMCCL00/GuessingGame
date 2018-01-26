@@ -21,41 +21,39 @@ public class Main {
         int number = (int)(Math.ceil(Math.random() * 100));
         while (playAgain) {
             System.out.println("Enter Your Guess: ");
-            int userGuess = input.nextInt();
             try {
-                userGuess;
-            }catch (Exception String){
-                System.out.println("That isn't a number >:(");
-
-            }
-            if (userGuess > number) {
-                System.out.println("Your guess was too high, try again!");
-                numberOfTimes = numberOfTimes + 1;
-            }
-            else if(userGuess < number) {
-                System.out.println("Your guess was too low, try again!");
-                numberOfTimes = numberOfTimes + 1;
-            }
-            else {
-                tries += 1;
-                wins += 1;
-                System.out.println("Congratulations!, you guessed correctly. You have played " + tries + " times. " + wins + " wins, " + losses + " losses. Would you like to play again? Y/N");
-                String playAgainTwo = yesNo.nextLine();
-                number = (int)(Math.ceil(Math.random() * 100));
-                if (playAgainTwo.equals("N") || playAgainTwo.equals("n")){
-                    System.out.println("Have a nice day!");
-
-                    playAgain = false;
+                int userGuess = input.nextInt();
+                if (userGuess > number) {
+                    System.out.println("Your guess was too high, try again!");
+                    numberOfTimes = numberOfTimes + 1;
                 }
-                else if (playAgainTwo.equals("Y") || playAgainTwo.equals("y")){
-                    System.out.println("Great!");
-                    playAgain = true;
-                    numberOfTimes = 0;
+                else if(userGuess < number) {
+                    System.out.println("Your guess was too low, try again!");
+                    numberOfTimes = numberOfTimes + 1;
                 }
                 else {
-                    System.out.println("Ending Program due to invalid response");
-                    playAgain = false;
+                    tries += 1;
+                    wins += 1;
+                    System.out.println("Congratulations!, you guessed correctly. You have played " + tries + " times. " + wins + " wins, " + losses + " losses. Would you like to play again? Y/N");
+                    String playAgainTwo = yesNo.nextLine();
+                    number = (int) (Math.ceil(Math.random() * 100));
+                    if (playAgainTwo.equals("N") || playAgainTwo.equals("n")) {
+                        System.out.println("Have a nice day!");
+
+                        playAgain = false;
+                    } else if (playAgainTwo.equals("Y") || playAgainTwo.equals("y")) {
+                        System.out.println("Great!");
+                        playAgain = true;
+                        numberOfTimes = 0;
+                    } else {
+                        System.out.println("Ending Program due to invalid response");
+                        playAgain = false;
+                    }
                 }
+            }
+            catch (Exception e){
+                System.out.println("That isn't a number.");
+                break;
             }
             if (numberOfTimes >= 5) {
                 tries += 1;
