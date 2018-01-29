@@ -1,6 +1,5 @@
 package com.company;
 
-import javax.rmi.CORBA.Util;
 import java.util.Scanner;
 
 public class Main {
@@ -31,7 +30,7 @@ public class Main {
                 } else if(userGuess < number) {
                     Utility.higher();
                     numberOfTimes += 1;
-                } else {
+                }else if(userGuess == number){
                     tries += 1;
                     wins += 1;
                      Utility.Win(tries,wins,losses);
