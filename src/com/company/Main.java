@@ -25,13 +25,11 @@ public class Main {
                 int userGuess = input.nextInt();
                 if (userGuess > number) {
                     System.out.println("Your guess was too high, try again!");
-                    numberOfTimes = numberOfTimes + 1;
-                }
-                else if(userGuess < number) {
+                    numberOfTimes +=  1;
+                } else if(userGuess < number) {
                     System.out.println("Your guess was too low, try again!");
-                    numberOfTimes = numberOfTimes + 1;
-                }
-                else {
+                    numberOfTimes += 1;
+                } else {
                     tries += 1;
                     wins += 1;
                     System.out.println("Congratulations!, you guessed correctly. You have played " + tries + " times. " + wins + " wins, " + losses + " losses. Would you like to play again? Y/N");
