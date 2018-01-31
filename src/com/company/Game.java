@@ -46,9 +46,9 @@ public class Game {
         tries++;
         Utility.notEquals(number, tries, wins, losses);
         number = (int) (Math.ceil(Math.random() * 100));
-        String playAgainThree = "";
         while(retry) {
             try {
+                String playAgainThree = "";
                 playAgainThree = yesNo.nextLine();
                 if (playAgainThree.equals("N") || playAgainThree.equals("n")) {
                     Utility.no();
